@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3547d68c-f601-4ff6-844e-203f95fb8766" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Injection.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="385">
+              <caret line="468" column="17" selection-start-line="468" selection-start-column="17" selection-end-line="468" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BBH_SNRthreshold_signals.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3555">
+              <caret line="237" selection-start-line="237" selection-end-line="237" />
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>gamma</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/__init__.py" />
+        <option value="$PROJECT_DIR$/bilby_gw_detector_interferometer_file.py" />
+        <option value="$PROJECT_DIR$/generate_injections.py" />
+        <option value="$PROJECT_DIR$/Sum.py" />
+        <option value="$PROJECT_DIR$/first_100_injections.py" />
+        <option value="$PROJECT_DIR$/CBC_BH_MultiDetector_SNRinj.py" />
+        <option value="$PROJECT_DIR$/Sum_plot.py" />
+        <option value="$PROJECT_DIR$/Overall_CSD_ET-D.py" />
+        <option value="$PROJECT_DIR$/Initial_data.py" />
+        <option value="$PROJECT_DIR$/bilby_modification_notes" />
+        <option value="$PROJECT_DIR$/SNR_values.py" />
+        <option value="$PROJECT_DIR$/Residual_Estimates.py" />
+        <option value="$PROJECT_DIR$/Injection_file/BBH_signal_SNRg10.txt" />
+        <option value="$PROJECT_DIR$/Injection_file/BBH_signal_SNRless10.txt" />
+        <option value="$PROJECT_DIR$/convert_to_pickle.py" />
+        <option value="$PROJECT_DIR$/SNR_vs_Redshift.py" />
+        <option value="$PROJECT_DIR$/astro_stochastic_background.py" />
+        <option value="$PROJECT_DIR$/BBH_SNRthreshold_signals.py" />
+        <option value="$PROJECT_DIR$/Cross_Correlation.py" />
+        <option value="$PROJECT_DIR$/CSD_Sum.py" />
+        <option value="$PROJECT_DIR$/distribution.py" />
+        <option value="$PROJECT_DIR$/Injection_signal_count.py" />
+        <option value="$PROJECT_DIR$/ORF_OF.py" />
+        <option value="$PROJECT_DIR$/Overall_CSDs_ET-D.py" />
+        <option value="$PROJECT_DIR$/Overall_CSDs_Sum.py" />
+        <option value="$PROJECT_DIR$/CBC_MultiDetector_Projection.py" />
+        <option value="$PROJECT_DIR$/Subtraction.py" />
+        <option value="$PROJECT_DIR$/Sensitivity_Curves.py" />
+        <option value="$PROJECT_DIR$/Projection.py" />
+        <option value="$PROJECT_DIR$/plot_sensitivity.py" />
+        <option value="$PROJECT_DIR$/plot_data.py" />
+        <option value="$PROJECT_DIR$/Injection.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="499" />
+    <option name="y" value="25" />
+    <option name="width" value="941" />
+    <option name="height" value="875" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="cbcpm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cbcpm" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Injection_file" />
+      <recent name="$PROJECT_DIR$/Sensitivity_Curve" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3547d68c-f601-4ff6-844e-203f95fb8766" name="Default Changelist" comment="" />
+      <created>1559911865692</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1559911865692</updated>
+    </task>
+    <task id="LOCAL-00096" summary="stochastic inflation background updates">
+      <created>1573722267245</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1573722267246</updated>
+    </task>
+    <task id="LOCAL-00097" summary="time domain strain issue resolved">
+      <created>1573764532311</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1573764532312</updated>
+    </task>
+    <task id="LOCAL-00098" summary="create injection file.">
+      <created>1573765287817</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1573765287817</updated>
+    </task>
+    <task id="LOCAL-00099" summary="minor updates">
+      <created>1574250257156</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1574250257156</updated>
+    </task>
+    <task id="LOCAL-00100" summary="100 binaries below redshift 0.8">
+      <created>1574250389776</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1574250389777</updated>
+    </task>
+    <task id="LOCAL-00101" summary="100 binaries below redshift 0.8">
+      <created>1574269664123</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1574269664123</updated>
+    </task>
+    <task id="LOCAL-00102" summary="100 binaries below redshift 0.8">
+      <created>1574270043933</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1574270043933</updated>
+    </task>
+    <task id="LOCAL-00103" summary="small changes to save data">
+      <created>1576768152804</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1576768152805</updated>
+    </task>
+    <task id="LOCAL-00104" summary="small changes to save data">
+      <created>1576798128296</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1576798128296</updated>
+    </task>
+    <task id="LOCAL-00105" summary="Sensitivity Curves and other updates">
+      <created>1577782162505</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1577782162505</updated>
+    </task>
+    <task id="LOCAL-00106" summary="Sensitivity Curves and other updates">
+      <created>1577782275118</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1577782275118</updated>
+    </task>
+    <task id="LOCAL-00107" summary="Sensitivity Curves and other updates">
+      <created>1577874194984</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1577874194985</updated>
+    </task>
+    <task id="LOCAL-00108" summary="Sensitivity Curves and other updates">
+      <created>1577983738462</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1577983738462</updated>
+    </task>
+    <task id="LOCAL-00109" summary="Cross Correlation Sum over all time segment">
+      <created>1578920254427</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1578920254427</updated>
+    </task>
+    <task id="LOCAL-00110" summary="Cosmological Background Updates">
+      <created>1579093984178</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1579093984178</updated>
+    </task>
+    <task id="LOCAL-00111" summary="Cross-Correlation updates">
+      <created>1579525739874</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1579525739875</updated>
+    </task>
+    <task id="LOCAL-00112" summary="Binary Injections with Zero Noise strain data">
+      <created>1579679648104</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1579679648104</updated>
+    </task>
+    <task id="LOCAL-00113" summary="minor updates">
+      <created>1579884669932</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1579884669933</updated>
+    </task>
+    <task id="LOCAL-00114" summary="minor updates">
+      <created>1580635644419</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1580635644422</updated>
+    </task>
+    <task id="LOCAL-00115" summary="minor updates">
+      <created>1580636045157</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1580636045157</updated>
+    </task>
+    <task id="LOCAL-00116" summary="minor updates">
+      <created>1580636652600</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1580636652601</updated>
+    </task>
+    <task id="LOCAL-00117" summary="Strain2omega updates">
+      <created>1581442090984</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1581442090985</updated>
+    </task>
+    <task id="LOCAL-00118" summary="Updates-minor-changes">
+      <created>1581954351077</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1581954351079</updated>
+    </task>
+    <task id="LOCAL-00119" summary="updates">
+      <created>1581974210540</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1581974210542</updated>
+    </task>
+    <task id="LOCAL-00120" summary="SNR values calculations">
+      <created>1582237402346</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1582237402347</updated>
+    </task>
+    <task id="LOCAL-00121" summary="minor updates">
+      <created>1582397949123</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1582397949124</updated>
+    </task>
+    <task id="LOCAL-00122" summary="normalization of overlap reduction function">
+      <created>1582648612773</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1582648612774</updated>
+    </task>
+    <task id="LOCAL-00123" summary="normalization of overlap reduction function">
+      <created>1582702792836</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1582702792837</updated>
+    </task>
+    <task id="LOCAL-00124" summary="bilby changes file">
+      <created>1582733017915</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1582733017932</updated>
+    </task>
+    <task id="LOCAL-00125" summary="Subtraction pickle file read">
+      <created>1582733040952</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1582733040953</updated>
+    </task>
+    <task id="LOCAL-00126" summary="Optimized final code.">
+      <created>1583588763084</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1583588763084</updated>
+    </task>
+    <task id="LOCAL-00127" summary="CSD sum changes">
+      <created>1583780599661</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1583780599661</updated>
+    </task>
+    <task id="LOCAL-00128" summary="best fit max posterior parameters for low SNR high redshift case.">
+      <created>1584370163869</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1584370163869</updated>
+    </task>
+    <task id="LOCAL-00129" summary="Fractional Spectrum Calculations">
+      <created>1584911499320</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1584911499322</updated>
+    </task>
+    <task id="LOCAL-00130" summary="minor updates">
+      <created>1585643551042</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1585643551043</updated>
+    </task>
+    <task id="LOCAL-00131" summary="Sum CSDs updates">
+      <created>1587111674589</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1587111674590</updated>
+    </task>
+    <task id="LOCAL-00132" summary="Sum CSDs updates">
+      <created>1587113503483</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1587113503483</updated>
+    </task>
+    <task id="LOCAL-00133" summary="Sum CSDs updates">
+      <created>1587716264784</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1587716264784</updated>
+    </task>
+    <task id="LOCAL-00134" summary="Code and Plots Update">
+      <created>1588094269840</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1588094269841</updated>
+    </task>
+    <task id="LOCAL-00135" summary="Code Update">
+      <created>1588698385427</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1588698385428</updated>
+    </task>
+    <task id="LOCAL-00136" summary="Code Update">
+      <created>1589267109030</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1589267109031</updated>
+    </task>
+    <task id="LOCAL-00137" summary="SNR Cut value code updates">
+      <created>1605003680521</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1605003680523</updated>
+    </task>
+    <task id="LOCAL-00138" summary="SNR Cut value code updates">
+      <created>1605004113452</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1605004113452</updated>
+    </task>
+    <task id="LOCAL-00139" summary="SNR plots for 1000 and 100 BBHs">
+      <created>1605380269848</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1605380269849</updated>
+    </task>
+    <task id="LOCAL-00140" summary="SNR plots for 1000 and 100 BBHs">
+      <created>1605380868083</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1605380868083</updated>
+    </task>
+    <task id="LOCAL-00141" summary="SNR threshold updates">
+      <created>1611218679021</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1611218679021</updated>
+    </task>
+    <task id="LOCAL-00142" summary="SNR threshold updates">
+      <created>1611231896166</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1611231896167</updated>
+    </task>
+    <task id="LOCAL-00143" summary="SNR threshold updates">
+      <created>1611306983387</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1611306983387</updated>
+    </task>
+    <task id="LOCAL-00144" summary="SNR threshold updates">
+      <created>1612610573923</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1612610573924</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="499" y="25" width="941" height="875" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23804347" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3299363" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3299363" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18755803" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="100 binaries below redshift 0.8" />
+    <MESSAGE value="small changes to save data" />
+    <MESSAGE value="Sensitivity Curves and other updates" />
+    <MESSAGE value="Cross Correlation Sum over all time segment" />
+    <MESSAGE value="Cosmological Background Updates" />
+    <MESSAGE value="Cross-Correlation updates" />
+    <MESSAGE value="Binary Injections with Zero Noise strain data" />
+    <MESSAGE value="Strain2omega updates" />
+    <MESSAGE value="Updates-minor-changes" />
+    <MESSAGE value="updates" />
+    <MESSAGE value="SNR values calculations" />
+    <MESSAGE value="normalization of overlap reduction function" />
+    <MESSAGE value="bilby changes file" />
+    <MESSAGE value="Subtraction pickle file read" />
+    <MESSAGE value="Optimized final code." />
+    <MESSAGE value="CSD sum changes" />
+    <MESSAGE value="best fit max posterior parameters for low SNR high redshift case." />
+    <MESSAGE value="Fractional Spectrum Calculations" />
+    <MESSAGE value="minor updates" />
+    <MESSAGE value="Sum CSDs updates" />
+    <MESSAGE value="Code and Plots Update" />
+    <MESSAGE value="Code Update" />
+    <MESSAGE value="SNR Cut value code updates" />
+    <MESSAGE value="SNR plots for 1000 and 100 BBHs" />
+    <MESSAGE value="SNR threshold updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="SNR threshold updates" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bilby_gw_detector_interferometer_file.py" />
+    <entry file="file://$PROJECT_DIR$/Injection_file/injections_10^{6}_test.hdf5" />
+    <entry file="file://$PROJECT_DIR$/Sensitivity_Curve/AdV_psd.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Initial_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1458">
+          <caret line="170" column="19" selection-start-line="170" selection-start-column="19" selection-end-line="170" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bilby_modification_notes">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4645">
+          <caret line="448" selection-start-line="448" selection-end-line="448" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/paper1/plots_Uniform/PSD_Welch_comparision_ET_D_1_18.png" />
+    <entry file="file://$PROJECT_DIR$/paper1/plots_Uniform/PSD_Welch_comparision_ET_D_1_42.png" />
+    <entry file="file://$PROJECT_DIR$/Uniform_BBH_DATA/BBH_SNRg10/CE_SNR.txt" />
+    <entry file="file://$PROJECT_DIR$/Injection_file/BBH_signal_SNRg10.txt" />
+    <entry file="file://$PROJECT_DIR$/Uniform_BBH_DATA/BBH_SNRg10/Uniform_BBH__SNRg10.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Injection_file/BBH_signal_SNRless10.txt" />
+    <entry file="file://$PROJECT_DIR$/Uniform_BBH_DATA/BBH_SNRless10/Uniform_BBH_SNRless10.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/first_100_injections.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-177">
+          <caret line="63" column="41" lean-forward="true" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generate_injections.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="48" lean-forward="true" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+          <folding>
+            <element signature="e#454#501#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SNR_values.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="80" lean-forward="true" selection-start-line="20" selection-start-column="80" selection-end-line="20" selection-end-column="80" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Injection_file/injections_10e6.hdf5" />
+    <entry file="file://$PROJECT_DIR$/SNR_vs_Redshift.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1002">
+          <caret line="28" selection-start-line="28" selection-start-column="2" selection-end-line="30" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/astro_stochastic_background.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7305">
+          <caret line="487" column="96" selection-start-line="487" selection-start-column="96" selection-end-line="487" selection-end-column="96" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CBC_BH_MultiDetector_SNRinj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="215" lean-forward="true" selection-start-line="215" selection-end-line="215" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/convert_to_pickle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cross_Correlation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="662">
+          <caret line="363" column="19" selection-start-line="363" selection-start-column="19" selection-end-line="363" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSD_Sum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="670">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/distribution.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="306" column="19" selection-start-line="306" selection-start-column="19" selection-end-line="306" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Injection_signal_count.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5385">
+          <caret line="359" selection-start-line="359" selection-end-line="359" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ORF_OF.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4635">
+          <caret line="309" column="25" lean-forward="true" selection-start-line="309" selection-start-column="25" selection-end-line="309" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Overall_CSDs_Sum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="662">
+          <caret line="181" selection-start-line="181" selection-end-line="181" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Overall_CSDs_ET-D.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="267" selection-start-line="267" selection-end-line="267" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Residual_Estimates.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="145" column="40" lean-forward="true" selection-start-line="145" selection-start-column="40" selection-end-line="145" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CBC_MultiDetector_Projection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2975">
+          <caret line="143" column="22" selection-start-line="143" selection-start-column="22" selection-end-line="143" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Subtraction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="790">
+          <caret line="618" selection-start-line="618" selection-end-line="618" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sensitivity_Curves.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1240">
+          <caret line="474" selection-start-line="474" selection-end-line="474" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="685">
+          <caret line="511" selection-start-line="511" selection-end-line="511" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18405">
+          <caret line="1227" selection-start-line="1227" selection-end-line="1227" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_sensitivity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-140">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Injection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="468" column="17" selection-start-line="468" selection-start-column="17" selection-end-line="468" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BBH_SNRthreshold_signals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3555">
+          <caret line="237" selection-start-line="237" selection-end-line="237" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

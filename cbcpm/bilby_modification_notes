@@ -1,0 +1,448 @@
+#############################################################
+# This file describe the changes to make into bilby for the #
+# Subtraction-Noise Projection Method to work effectively   #
+#############################################################
+
+######################################################################
+# Add projection_derivatives to bilby/core/utils.py                  #
+# Add this module after derivatives in core/utils.py script in bilby #
+######################################################################
+
+def projection_derivatives(vals_dict, func, releps=1e-4, abseps=None, mineps=1e-9, reltol=1e-3,
+                           epsscale=0.5, nonfixedidx=None):
+    """
+        Calculate the partial derivatives of a function at a set of values. The
+        derivatives are calculated using the central difference, using an iterative
+        method to check that the values converge as step size decreases.
+
+        Parameters
+        ----------
+        vals: array_like
+            A set of values, that are passed to a function, at which to calculate
+            the gradient of that function
+        func:
+            A function that takes in an array of values.
+        releps: float, array_like, 1e-3
+            The initial relative step size for calculating the derivative.
+        abseps: float, array_like, None
+            The initial absolute step size for calculating the derivative.
+            This overrides `releps` if set.
+            `releps` is set then that is used.
+        mineps: float, 1e-9
+            The minimum relative step size at which to stop iterations if no
+            convergence is achieved.
+        epsscale: float, 0.5
+            The factor by which releps if scaled in each iteration.
+        nonfixedidx: array_like, None
+            An array of indices in `vals` that are _not_ fixed values and therefore
+            can have derivatives taken. If `None` then derivatives of all values
+            are calculated.
+
+        Returns
+        -------
+        grads: array_like
+            An array of gradients for each non-fixed value.
+        """
+
+    vals = list(vals_dict.values())
+    keys = vals_dict.keys()
+
+    if nonfixedidx is None:
+        nonfixedidx = range(len(vals))
+
+    if len(nonfixedidx) > len(vals):
+        raise ValueError("To many non-fixed values")
+
+    if max(nonfixedidx) >= len(vals) or min(nonfixedidx) < 0:
+        raise ValueError("Non-fixed indexes contain non-existant indices")
+
+    # set steps
+    if abseps is None:
+        if isinstance(releps, float):
+            eps = np.abs(vals) * releps
+            eps[eps == 0.] = releps  # if any values are zero set eps to releps
+        elif isinstance(releps, (list, np.ndarray)):
+            if len(releps) != len(vals):
+                raise ValueError("Problem with input relative step sizes")
+            eps = np.multiply(np.abs(vals), releps)
+            eps[eps == 0.] = np.array(releps)[eps == 0.]
+        else:
+            raise RuntimeError("Relative step sizes are not a recognised type!")
+    else:
+        if isinstance(abseps, float):
+            eps = abseps * np.ones(len(vals))
+        elif isinstance(abseps, (list, np.ndarray)):
+            if len(abseps) != len(vals):
+                raise ValueError("Problem with input absolute step sizes")
+            eps = np.array(abseps)
+        else:
+            raise RuntimeError("Absolute step sizes are not a recognised type!")
+
+    i = nonfixedidx[0]
+
+    # initial parameter diffs
+    leps = eps[i]
+
+    # get central finite difference
+    fvals = np.copy(vals)
+    bvals = np.copy(vals)
+
+    # central difference
+    fvals[i] += 0.5 * leps  # change forwards distance to half eps
+    bvals[i] -= 0.5 * leps  # change backwards distance to half eps
+
+    fvals_dict = dict(zip(keys, fvals))
+    bvals_dict = dict(zip(keys, bvals))
+
+    grads = (func(fvals_dict) - func(bvals_dict)) / leps
+
+    for i in nonfixedidx[1:]:
+        # initial parameter diffs
+        leps = eps[i]
+
+        # get central finite difference
+        fvals = np.copy(vals)
+        bvals = np.copy(vals)
+
+        # central difference
+        fvals[i] += 0.5 * leps  # change forwards distance to half eps
+        bvals[i] -= 0.5 * leps  # change backwards distance to half eps
+
+        fvals_dict = dict(zip(keys, fvals))
+        bvals_dict = dict(zip(keys, bvals))
+        cdiff = (func(fvals_dict) - func(bvals_dict)) / leps
+
+        grads = np.vstack((grads, cdiff))
+
+    return grads
+
+
+###############################################
+# Adding prior files to bilby.gw.prior_files/ #
+###############################################
+
+#########################################################################
+## create a prior file "binary_black_holes_cosmo_uniform.prior" and add #
+#########################################################################
+
+# These are the default priors we use for BBH systems.
+# Note that you may wish to use more specific mass and distance parameters.
+# These commands are all known to bilby.gw.prior.
+# Lines beginning "#" are ignored.
+# chirp_mass = Uniform(name='chirp_mass', minimum=25, maximum=100, unit='$M_{\\odot}$')
+# total_mass =  Uniform(name='total_mass', minimum=10, maximum=200, unit='$M_{\\odot}$')
+# mass_ratio =  Uniform(name='mass_ratio', minimum=0.125, maximum=1)
+# symmetric_mass_ratio =  Uniform(name='symmetric_mass_ratio', minimum=8 / 81, maximum=0.25)
+a_1 =  Uniform(name='a_1', minimum=0, maximum=0.8)
+a_2 =  Uniform(name='a_2', minimum=0, maximum=0.8)
+tilt_1 =  Sine(name='tilt_1')
+tilt_2 =  Sine(name='tilt_2')
+# cos_tilt_1 =  Uniform(name='cos_tilt_1', minimum=-1, maximum=1)
+# cos_tilt_2 =  Uniform(name='cos_tilt_2', minimum=-1, maximum=1)
+phi_12 =  Uniform(name='phi_12', minimum=0, maximum=2 * np.pi)
+phi_jl =  Uniform(name='phi_jl', minimum=0, maximum=2 * np.pi)
+dec =  Cosine(name='dec')
+ra =  Uniform(name='ra', minimum=0, maximum=2 * np.pi)
+theta_jn =  Sine(name='theta_jn')
+# cos_iota =  Uniform(name='cos_iota', minimum=-1, maximum=1)
+psi =  Uniform(name='psi', minimum=0, maximum=np.pi)
+phase =  Uniform(name='phase', minimum=0, maximum=2 * np.pi)
+# following lines are dummies; priors redefined in python code
+redshift = Uniform(name='redshift', minimum=0, maximum=20)
+# 'luminosity_distance': UniformComovingVolume(name='luminosity_distance', minimum=1e2, maximum=4e3)
+mass_1 = Uniform(name='mass_1', minimum=5, maximum=60, unit='$M_{\\odot}$')
+mass_2 = Uniform(name='mass_2', minimum=5, maximum=60, unit='$M_{\\odot}$')
+# GPS time prior is uniform over the year 2018
+geocent_time = Uniform(name='geocent_time', minimum=1198800017, maximum=1230336017, unit='s')
+
+
+
+##################################################################
+## create a prior file "binary_black_holes_cosmo.prior"  and add #
+##################################################################
+
+# These are the default priors we use for BBH systems.
+# Note that you may wish to use more specific mass and distance parameters.
+# These commands are all known to bilby.gw.prior.
+# Lines beginning "#" are ignored.
+# chirp_mass = Uniform(name='chirp_mass', minimum=25, maximum=100, unit='$M_{\\odot}$')
+# total_mass =  Uniform(name='total_mass', minimum=10, maximum=200, unit='$M_{\\odot}$')
+# mass_ratio =  Uniform(name='mass_ratio', minimum=0.125, maximum=1)
+# symmetric_mass_ratio =  Uniform(name='symmetric_mass_ratio', minimum=8 / 81, maximum=0.25)
+a_1 =  Uniform(name='a_1', minimum=0, maximum=0.8)
+a_2 =  Uniform(name='a_2', minimum=0, maximum=0.8)
+tilt_1 =  Sine(name='tilt_1')
+tilt_2 =  Sine(name='tilt_2')
+# cos_tilt_1 =  Uniform(name='cos_tilt_1', minimum=-1, maximum=1)
+# cos_tilt_2 =  Uniform(name='cos_tilt_2', minimum=-1, maximum=1)
+phi_12 =  Uniform(name='phi_12', minimum=0, maximum=2 * np.pi)
+phi_jl =  Uniform(name='phi_jl', minimum=0, maximum=2 * np.pi)
+dec =  Cosine(name='dec')
+ra =  Uniform(name='ra', minimum=0, maximum=2 * np.pi)
+iota =  Sine(name='iota')
+# cos_iota =  Uniform(name='cos_iota', minimum=-1, maximum=1)
+psi =  Uniform(name='psi', minimum=0, maximum=np.pi)
+phase =  Uniform(name='phase', minimum=0, maximum=2 * np.pi)
+# following lines are dummies; priors redefined in python code
+# luminosity_distance = UniformComovingVolume(name='luminosity_distance', minimum=1e2, maximum=5e4),
+redshift = Uniform(name='redshift', minimum=0, maximum=20)
+mass_1 = PowerLaw(name='mass_1', alpha=-1.6, minimum=5, maximum=60, unit='$M_{\\odot}$')
+mass_2 = PowerLaw(name='mass_2', alpha=-1.6, minimum=5, maximum=60, unit='$M_{\\odot}$')
+# GPS time prior is uniform over the year 2018
+geocent_time = Uniform(name='geocent_time', minimum=1198800017, maximum=1230336017)
+
+
+
+####################################################
+# Adding Detectors to bilby.gw.detector.detectors/ #
+####################################################
+
+##################################################
+# Create a file "ET_D_TR.interferometer" and add #
+##################################################
+
+# The proposed Einstein Telescope located at the site of Virgo.
+# LIGO-T980044-10
+# https://dcc.ligo.org/LIGO-P1600143/public
+name = 'ET'
+power_spectral_density = PowerSpectralDensity(psd_file='ET_D_psd.txt')
+length = 10.39
+minimum_frequency = 2
+maximum_frequency = 2048
+latitude = 40.5213
+longitude = 9.4248
+elevation = 0.0
+xarm_azimuth = 85.7342
+yarm_azimuth = 145.734
+shape = 'Triangle'
+
+
+#################################################
+# Create a file "ET_D_L.interferometer" and add #
+#################################################
+
+# The proposed Einstein Telescope located at the site of Virgo.
+# LIGO-T980044-10
+# https://dcc.ligo.org/LIGO-P1600143/public
+name = 'ET'
+power_spectral_density = PowerSpectralDensity(psd_file='ET_D_psd.txt')
+length = 15.3
+minimum_frequency = 2
+maximum_frequency = 2048
+latitude = 40.4973
+longitude = 9.3766
+elevation = 0.0
+xarm_azimuth = 112.799
+yarm_azimuth = 202.799
+
+
+
+#################################################################
+# Adding Subtraction part changes to bilby.gw.detector/ scripts #
+#################################################################
+
+############################################################################
+# In file bilby.gw.detector.network.py after inject_signal add this module #
+############################################################################
+
+def subtract_signal(self, parameters=None, injection_polarizations=None, waveform_generator=None):
+    """ Subtract a signal into noise in each of the three detectors.
+
+    Parameters
+    ----------
+    parameters: dict
+        Parameters of the subtraction.
+    injection_polarizations: dict
+       Polarizations of waveform to subtract, output of
+       `waveform_generator.frequency_domain_strain()`. If
+       `waveform_generator` is also given, the injection_polarizations will
+       be calculated directly and this argument can be ignored.
+    waveform_generator: bilby.gw.waveform_generator.WaveformGenerator
+        A WaveformGenerator instance using the source model to inject. If
+        `injection_polarizations` is given, this will be ignored.
+
+    Note
+    ----------
+    if your signal takes a substantial amount of time to generate, or
+    you experience buggy behaviour. It is preferable to provide the
+    injection_polarizations directly.
+
+    Returns
+    -------
+    injection_polarizations: dict
+
+    """
+    if injection_polarizations is None:
+        if waveform_generator is not None:
+            injection_polarizations = \
+                waveform_generator.frequency_domain_strain(parameters)
+        else:
+            raise ValueError(
+                "subtract_signal needs one of waveform_generator or "
+                "injection_polarizations.")
+
+    all_injection_polarizations = list()
+    for interferometer in self:
+        all_injection_polarizations.append(
+            interferometer.subtract_signal(parameters=parameters, injection_polarizations=injection_polarizations))
+
+    return all_injection_polarizations
+
+
+############################################################################################
+# In file bilby.gw.detector.interferometer.py after inject_signal moduls add these modules #
+############################################################################################
+
+def subtract_signal(self, parameters, injection_polarizations=None,
+                    waveform_generator=None):
+    """ General signal subtraction method.
+    Provide the subtraction/best-fit parameters and either the injection polarizations
+    or the waveform generator to subtract a signal from the detector strain.
+    Defaults to the injection polarizations is both are given.
+
+    Parameters
+    ----------
+    parameters: dict
+        Parameters of the injection.
+    injection_polarizations: dict, optional
+       Polarizations of waveform to inject, output of
+       `waveform_generator.frequency_domain_strain()`. If
+       `waveform_generator` is also given, the injection_polarizations will
+       be calculated directly and this argument can be ignored.
+    waveform_generator: bilby_check.gw.waveform_generator.WaveformGenerator, optional
+        A WaveformGenerator instance using the source model to inject. If
+        `injection_polarizations` is given, this will be ignored.
+
+    Note
+    -------
+    if your signal takes a substantial amount of time to generate, or
+    you experience buggy beh
+    aviour. It is preferable to provide the
+    injection_polarizations directly.
+
+    Returns
+    -------
+    injection_polarizations: dict
+        The injected polarizations. This is the same as the injection_polarizations parameters
+        if it was passed in. Otherwise it is the return value of waveform_generator.frequency_domain_strain().
+
+    """
+    if injection_polarizations is None and waveform_generator is None:
+        raise ValueError(
+            "subtract_signal needs one of waveform_generator or "
+            "injection_polarizations.")
+    elif injection_polarizations is not None:
+        self.subtract_signal_from_waveform_polarizations(parameters=parameters,
+                                                         injection_polarizations=injection_polarizations)
+    elif waveform_generator is not None:
+        injection_polarizations = self.subtract_signal_from_waveform_generator(parameters=parameters,
+                                                                               waveform_generator=waveform_generator)
+    return injection_polarizations
+
+def subtract_signal_from_waveform_generator(self, parameters, waveform_generator):
+    """ Subtract a signal using a waveform generator and a set of parameters.
+    Alternative to `subtract_signal` and `subtract_signal_from_waveform_polarizations`
+
+    Parameters
+    ----------
+    parameters: dict
+        Parameters of the injection.
+    waveform_generator: bilby.gw.waveform_generator.WaveformGenerator
+        A WaveformGenerator instance using the source model to subtract.
+
+    Note
+    -------
+    if your signal takes a substantial amount of time to generate, or
+    you experience buggy behaviour. It is preferable to use the
+    inject_signal_from_waveform_polarizations() method.
+
+    Returns
+    -------
+    injection_polarizations: dict
+        The internally generated injection parameters
+
+    """
+    injection_polarizations = \
+        waveform_generator.frequency_domain_strain(parameters)
+    # print('injection_polarization',injection_polarizations)
+    self.subtract_signal_from_waveform_polarizations(parameters=parameters,
+                                                     injection_polarizations=injection_polarizations)
+    return injection_polarizations
+
+def subtract_signal_from_waveform_polarizations(self, parameters, injection_polarizations):
+    """ Subtract a signal from the detector from a dict of waveform polarizations.
+    Alternative to `subtract_signal` and `subtract_signal_from_waveform_generator`.
+
+    Parameters
+    ----------
+    parameters: dict
+        Parameters of the injection.
+    injection_polarizations: dict
+       Polarizations of waveform to inject, output of
+       `waveform_generator.frequency_domain_strain()`.
+
+    """
+    if not self.strain_data.time_within_data(parameters['geocent_time']):
+        logger.warning(
+            'Subtracting signal outside segment, start_time={}, merger time={}.'
+                .format(self.strain_data.start_time, parameters['geocent_time']))
+
+    signal_ifo = - self.get_detector_response(injection_polarizations, parameters)
+    self.strain_data.frequency_domain_strain += signal_ifo
+
+    self.meta_data['optimal_SNR'] = (
+        np.sqrt(self.optimal_snr_squared(signal=signal_ifo)).real)
+    self.meta_data['matched_filter_SNR'] = (
+        self.matched_filter_snr(signal=signal_ifo))
+    self.meta_data['parameters'] = parameters
+
+    logger.info("Subtracted signal in {}:".format(self.name))
+    logger.info("  optimal SNR = {:.2f}".format(self.meta_data['optimal_SNR']))
+    logger.info("  matched filter SNR = {:.2f}".format(self.meta_data['matched_filter_SNR']))
+    for key in parameters:
+        logger.info('  {} = {}'.format(key, parameters[key]))
+
+
+###############################################################################################
+# Again in bilby.gw.detector.interferometer.py change plot_data module with the following one #
+###############################################################################################
+
+def plot_data(self, signal=None, outdir='.', label=None):
+    if utils.command_line_args.bilby_test_mode:
+        return
+
+    fig, ax = plt.subplots()
+    df = self.strain_data.frequency_array[1] - self.strain_data.frequency_array[0]
+    asd = gwutils.asd_from_freq_series(
+        freq_data=self.strain_data.frequency_domain_strain, df=df)
+
+    ax.loglog(self.strain_data.frequency_array[self.strain_data.frequency_mask],
+              asd[self.strain_data.frequency_mask],
+              color='C0', label=self.name)
+
+    if signal is not None:
+        signal_asd = gwutils.asd_from_freq_series(
+            freq_data=signal, df=df)
+
+        ax.loglog(self.strain_data.frequency_array[self.strain_data.frequency_mask],
+                  signal_asd[self.strain_data.frequency_mask],
+                  color='C2',
+                  label='Signal')
+
+    ax.loglog(self.strain_data.frequency_array[self.strain_data.frequency_mask],
+              self.amplitude_spectral_density_array[self.strain_data.frequency_mask],
+              color='C1', lw=1.0, label=self.name + ' ASD')
+
+    ax.grid(True)
+    ax.set_ylabel(r'Strain [1/$\sqrt{\rm Hz}$]')
+    ax.set_xlabel(r'Frequency [Hz]')
+    ax.legend(loc='best')
+    fig.tight_layout()
+    if label is None:
+        fig.savefig(
+            '{}/{}_frequency_domain_data.png'.format(outdir, self.name), dpi=300)
+    else:
+        fig.savefig(
+            '{}/{}_{}_frequency_domain_data.png'.format(
+                outdir, self.name, label), dpi=300)
+    plt.close(fig)
